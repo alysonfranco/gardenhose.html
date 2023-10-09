@@ -1,0 +1,494 @@
+:root {
+    --bg-color: #175c4c;
+    --nav-color: #fff;
+    --nav-text-color: #175c4c;
+    --main-color: #175c4c;
+    --hover-color: #d19562;
+    --footer-bg: #efdbce;
+}
+
+/*basic styling */
+* {
+    box-sizing: border-box;
+    font-family: 'Varela Round', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+   /* background-color: var(--bg-color); */
+   margin: 100px auto;
+   margin-bottom: 0;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--main-color);
+}
+strong {
+    font-variant: small-caps;
+    color: var(--main-color);
+}
+
+/* .shopping_cart {
+    width: 3em;
+    font-size: xx-large;
+} may be implemented with javascript next assignment */
+
+/* styling for linked webpage titles*/
+.page_title {
+    background-image: url(../img/more-leaves.png);
+    text-align: center;
+    height: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+.page_title img {
+    width: 3em;
+}
+
+/*.homepage {
+    display: grid;
+    width: 100%;
+    grid-template-rows: 1fr 30rem 15rem auto;
+    grid-template-areas: 
+    "banner banner banner"
+    "featured featured featured"
+    "about about about"
+    "footer footer footer";
+}  old styling, commented out for better layout */
+
+.footer {
+    background-color: var(--footer-bg);
+    text-align: center;
+    /*grid-area: footer; */
+    font-size: xx-small;
+    width: 100%;
+}
+
+/*navigation styling for desktop and large devices*/
+.logo img{
+    padding: 0;
+    margin: 0;
+    width: 16em;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav li {
+    list-style: none;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.burger-menu {
+    display: none;
+    user-select: none;
+}
+
+.header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    left: 0;
+    background-color: var(--nav-color);
+    padding: 0 10px 0 10px;
+    z-index: 999;
+    width: 100%;
+    box-shadow: 0 0.2em .5em gray;
+}
+
+.menu a {
+    color: var(--nav-text-color);
+    position: relative;
+}
+
+.menu-items {
+    display: inline-flex;
+    gap: 1em;
+    position: relative;
+    font-size: large;
+    font-family: 'Varela Round', sans-serif;
+    font-variant: small-caps;
+    margin: auto;
+}
+
+.menu-items a:hover {
+    color: var(--hover-color);
+}
+
+/*navigation hover animations */
+.menu-items a::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 2px;
+    top: 1.2em;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-color);
+    transform: scale(0,1);
+    transition: transform ease-in-out 250ms;
+}
+
+nav a:hover::after {
+    transform: scale(1,1);
+}
+
+/* homepage banner styling */
+.banner {
+    width: 100%;
+/*    grid-area: banner;
+    grid-column: 2;  */
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    border-bottom: 1px solid #9cd5b4;
+}
+
+.banner_content {
+    position: relative;
+    grid-column: 2;
+}
+
+.banner_img {
+    width: 100%;
+}
+
+.banner_header, .banner_subheader, .banner_btn {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+}
+
+.banner_header {
+    text-align: left;
+    font-size: 3rem;
+    text-transform: uppercase;
+    top: 1.25em;
+    left: 38px;
+}
+
+.banner_subheader {
+    text-align: left;
+    font-variant: small-caps;
+    font-size: 1.2rem;
+    color:var(--hover-color);
+    top: 10.5em;
+    left: 38px;
+}
+
+.banner_subheader span {
+    color: #175c4c;
+}
+
+.banner_btn { 
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: var(--footer-bg);
+    padding: 10px;
+    color: var(--main-color);
+    text-align: left;
+    top: 15em;
+    left: 40px;
+    border-radius: 3px;
+}
+
+.banner_btn:hover {
+    box-shadow: 0 0.2em .5em gray;
+}
+
+.banner_symbol {
+    display: none;
+}
+
+/* featured items sections styling */
+.featured_items {
+    background-color: #9cd5b4;
+}
+
+.featured_section_header {
+    text-align: center;
+    margin-bottom: -1em;
+    font-variant: small-caps;
+}
+
+.featured {
+    margin: 0;
+    width: 100%;
+    font-size: 80%;
+    /*grid-area: featured;*/
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: 1fr;
+    gap: 1em;
+    margin-bottom: 2em;
+    place-items: center;
+    padding: 1em;
+}
+
+/*general styling for products in featured section and all other webpages*/
+.item:hover {
+    box-shadow: 0 0.2em .5em gray;
+    transition: 250ms ease-in;
+}
+
+.item {
+    margin: 0;
+    padding: 1em;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    background-color: var(--nav-color);
+}
+
+.item img {
+    width: 100%;
+    order: -1;
+    border: 1px solid #9cd5b4;
+    align-self: center;
+}
+
+.item h1{
+    margin-bottom: 0;
+    font-size: 90%;
+}
+
+.price {
+    text-align: right;
+}
+
+.shop_btn {
+    margin-top: auto;
+    border: none;
+    background-color: #efdbce;
+}
+
+.shop_btn:hover {
+    background-color: var(--hover-color);
+}
+
+/* seed webpage styling */
+.products {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+}
+
+
+                                                                                    /*media queries */ 
+/*navigation bar styling for smaller devices*/
+@media screen and (max-width: 1015px) {
+    /*basic styling*/
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 80px auto;
+        margin-bottom: 0;
+    }
+
+    .logo img{
+        padding: 0;
+        margin: 0;
+        width: 12em;
+    }
+
+    .mini_logo {
+        margin: 0;
+        padding: 0;
+    }
+
+    .burger-menu {
+        display: block;
+        font-size: 30px;
+        color: var(--nav-text-color);
+    }
+
+    /*menu styling*/
+    .menu-items {
+        display: block;
+        left: 0;
+        position: absolute;
+        margin-top: 0;
+        text-align: right;
+        padding: 1em 1em 0;
+        gap: 1em;
+        font-size: medium;
+        width: 100%;
+        background-color: var(--nav-color);
+        /* burger menu animation start*/
+        transform: scale(1,0);
+        transform-origin: top;
+        transition: transform 400ms ease-in-out;
+    }
+
+    .menu-items li {
+        margin-bottom: 1em;
+        /* animation*/
+        opacity: 0;
+        transition: all 300ms ease-out;
+    }
+
+    .nav-toggle:checked ~ .menu-items {
+        transform: scale(1,1);
+    }
+
+    .nav-toggle:checked ~ .menu-items li {
+        opacity: 1;
+        transition: all 250ms ease-in;
+    } /*burger animation end*/
+
+}
+
+/* banner styling for narrower devices */
+@media (max-width: 1200px) and (min-width: 810px){
+
+    /*banner styling for homepage*/
+    .banner_header {
+        font-size: 2.5rem;
+        top: 1.23em;
+        left: 40px;
+    }
+    
+    .banner_subheader {
+        font-size: 0.95rem;
+        top: 11.5em;
+        left: 40px;
+    }
+    
+    .banner_btn { /*to be implemented with javascript*/
+        padding: 8px;
+        font-size: small;
+        top: 16em;
+        left: 40px;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 810px) {
+
+    /*banner styling for homepage*/
+    .banner_header {
+        font-size: 1.9rem;
+        top: 1.2em;
+        left: 17px;
+    }
+    
+    .banner_subheader {
+        display: none;
+    }
+    
+    .banner_btn { /*to be implemented with javascript*/
+        padding: 8px;
+        font-size: small;
+        top: 11em;
+        left: 17px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    /*banner styling for homepage*/
+    .banner_header {
+        font-size: 1.4rem;
+        top: 1.2em;
+        left: 17px;
+    }
+    
+    .banner_subheader {
+        display: none;
+    }
+    
+    .banner_btn { /*to be implemented with javascript*/
+        padding: 8px;
+        font-size: x-small;
+        top: 10em;
+        left: 17px;
+    }
+
+    .products {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1em;
+        margin-bottom: 1em;
+        padding: 1em;
+    }
+}
+
+/* banner styling for smaller screens and mobile devices */
+@media screen and (max-width: 470px) {
+    
+    /*banner styling for homepage*/
+    .banner {
+        background-image: url(../img/more-leaves.png);
+        height: 160px;
+    }
+
+    .banner_content {
+        position: relative;
+        grid-column: 1 / span 3;
+    }
+
+    .banner_img {
+        display: none;
+    } 
+    
+    .banner_symbol {
+        position: absolute;
+        display: block;
+        width: 8em;
+        bottom: 0;
+        right: 1em;
+
+    }
+
+    .banner_header, .banner_subheader, .banner_btn {
+        position: unset;
+        margin: 0;
+        padding: 0;
+    }
+
+    .banner_header {
+        position: absolute;
+        color: var(--main-color);
+        top: .1em;
+        font-size: 1.3rem;
+    }
+
+    .banner_subheader {
+        display: none;
+    }
+
+    .banner_btn {
+        position: absolute;
+        text-align: center;
+        top: 9em;
+        padding: 6px;
+        width: 22em;
+        color: var(--main-color);
+        background-color: var(--footer-bg);
+    }
+
+    /*featured section styling */
+    .featured_section_header {
+        text-align: center;
+        font-size: .65rem;
+    }
+
+}
+

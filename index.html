@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+    <html lang = "en">
+        <head>
+            <meta charset = "UTF-8">
+            <title>Garden Hose</title>
+            <link rel = "stylesheet" href="css/styles.css">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Varela+Round&display=swap');
+            </style>  
+        </head>
+        
+        <body>
+            
+            <!--navigation bar-->
+            <header class = "header">
+                <div class = "logo">
+                    <a href="index.html">
+                    <img src = "img/garden_hose_logo.png" alt = "garden hose logo">
+                    </a>
+                </div>
+                    <nav class = "menu">
+                    <!--checkbox used fro hamburger menu for responsive website-->
+                        <input type= "checkbox" id = "nav-toggle" class = "nav-toggle">
+                        <label for = "nav-toggle" class = "burger-menu">&#9776</label>
+                    <!--navigation menu items-->
+                        <ul class = "menu-items">
+                            <li><a href = "seeds.html">Seeds</a><i></i></li> <!--only seeds, no seedlings or saplings-->
+                            <li><a href = "tools.html">Tools</a></li> <!--gardening tools, wheelbarrows, hose, etc-->
+                            <li><a href = "planters.html">Planters</a></li> <!--post, garden beds, and things of that nature-->
+                            <li><a href = "soils.html">Soils & Fertilizers</a></li> <!--soils, fertilizers, compost, and things of that nature-->
+                            <li><a href = "misc.html">Accessories</a></li> <!-- like books, gloves, hats, and planting kits-->
+                            <li><a href="shoppingcart.html">&#128722</a></li>
+                        </ul>
+                    </nav>
+            </header>
+
+            <!--homepage banner-->
+            <div class = "homepage">
+                <div id = "banner" class = "banner">
+                    <div class = "banner_content">
+                        <img class = "banner_img" src = "img/Seed-Growing.jpg">
+                        <img class = "banner_symbol" src = "img/garden_hose_symbol.png">
+                            <h1 class = "banner_header">We have the seeds for all <br> your garden needs</h1>
+                            <p class = "banner_subheader">you reap what you sow, so choose the right seed <span>or something...</span></p>
+                            <a href = "#featured_items" class = "banner_btn">Shop Now</a> <!--for now it link to featured but it will be changed to some sprting feature with javascript-->
+                    </div>
+                </div>
+
+
+                <!--garden starter essentails-->
+                <div id = "featured_items" class = featured_items>
+                    <div class = "featured_section_header">
+                        <h1>Garden Starter Essentials</h1>
+                    </div>
+                    <main class = "featured">
+                        <article class = "item">
+                            <h1>Carrot Seeds</h1>
+                            <p class = "price">$0.98</p>
+                            <img src="img/carrot_seeds.jpg">
+                            <button class = "shop_btn">BUY NOW</button> <!--will be implemented in javascript-->
+                        </article>
+                        <article class = "item">
+                            <h1>Seed Starter Potting Mix</h1>
+                            <p class = "price">$6.98</p>
+                            <img src="img/seed_starter_soil.jpg"> 
+                            <button class = "shop_btn">BUY NOW</button> <!--will be implemented in javascript-->
+                        </article>
+                        <article class = "item">
+                            <h1>Seed Starter Greenhouse</h1>
+                            <p class = "price">$4.98</p>
+                            <img src="img/seed_starter_greenhouse.jpg">
+                            <button class = "shop_btn">BUY NOW</button> <!--will be implemented in javascript--> 
+                        </article>
+                        <article class = "item">
+                            <h1>Garden Hand Tool Kit</h1>
+                            <p class = "price">$11.98</p>
+                            <img src="img/garden_tool_kit.jpg"> 
+                            <button class = "shop_btn">BUY NOW</button> <!--will be implemented in javascript-->
+                        </article>
+                        <article class = "item">
+                            <h1>Garden Gloves</h1>
+                            <p class = "price">$4.98</p>
+                            <img src="img/garden_gloves.jpg"> 
+                            <button class = "shop_btn">BUY NOW</button> <!--will be implemented in javascript-->
+                        </article>
+                        <article class = "item">
+                            <h1>Watering Can</h1>
+                            <p class = "price">$5.98</p>
+                            <img src="img/watering_can.jpg"> 
+                            <button class = "shop_btn">BUY NOW</button> <!--will be implemented in javascript-->
+                        </article>
+                    </main>
+                </div>
+                <!--footer-->
+                <div id = "footer" class = "footer">
+                        <img class = "mini_logo" src = "img/garden_hose_mini_logo.png" alt = "garden hose mini logo" width = "100px"><br>
+                        &copy;2022 GARDEN HOSE
+                </div>
+            </div>
+
+        </body>
+    </html>
